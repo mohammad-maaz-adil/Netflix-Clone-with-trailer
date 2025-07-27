@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Login</title>
+  <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+  <div class="background">
+    <div class="overlay"></div>
+<nav >
+      <img src="/images/logo.svg" alt="logo.svg">
+    </nav>
+    
+  <div class="form-wrapper">
+   
+    <form id="loginForm">
+       <h2>Sign In</h2>
+      <div class="form-control">
+        <input type="email" id="loginEmail" placeholder=" " required>
+        <label for="loginEmail">Email or phone number</label>
+      </div>
+
+      <div class="form-control">
+        <input type="password" id="loginPassword" placeholder=" " required>
+        <label for="loginPassword">Password</label>
+      </div>
+
+      <button type="submit">Sign In</button>
+
+      <div class="form-help">
+        <label class="remember-me">
+          <input type="checkbox"> Remember me
+        </label>
+        <a href="#">Need help?</a>
+      </div>
+
+      <small>
+        New to Netflix? <a href="signup.html">Sign up now</a>.
+      </small>
+    </form>
+    </div>
+  </div>
+  
+
+  <script src="signin.js"></script>
+  <script>
+    // Hook the form submit event safely
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      login(); // Call your function
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Netflix Help Center</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background:#f9f9f9; color:#1c1c1c; }
+    header {
+      background:#000; padding:16px; position:sticky; top:0; z-index:100;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .logo { font-size:24px; color:#e50914; font-weight:bold; }
+    .btn-signin {
+      background:#e50914; color:#fff; padding:8px 20px;
+      border:none; border-radius:4px; font-weight:600;
+      transition:background .3s;
+    }
+    .btn-signin:hover { background:#b20710; }
+    .search-container {
+      display:flex; justify-content:center; padding:32px 16px; background:#fff;
+      border-bottom:1px solid #ddd;
+    }
+    .search-box { position:relative; max-width:600px; width:100%; }
+    .search-box input {
+      width:100%; padding:14px 48px 14px 16px;
+      border-radius:4px; border:1px solid #ccc; font-size:16px;
+    }
+    .search-box .icon {
+      position:absolute; right:16px; top:50%; transform:translateY(-50%);
+      font-size:20px; color:#888;
+    }
+    .layout { display:flex; max-width:1280px; margin:32px auto; gap:24px; flex-wrap:wrap; }
+    aside {
+      flex:1 1 240px; background:#fff; padding:16px;
+      border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    }
+    .aside-title { margin-bottom:12px; font-weight:600; font-size:18px; color:#333; }
+    .section {
+      margin-bottom:12px;
+    }
+    .section > button {
+      width:100%; display:flex; justify-content:space-between;
+      padding:8px 0; background:none; border:none;
+      font-weight:500; font-size:16px; color:#444; cursor:pointer;
+    }
+    .section-items {
+      padding-left:16px; overflow:hidden; transition:max-height .3s ease;
+    }
+    .section-items a {
+      display:block; padding:6px 0; text-decoration:none;
+      color:#555; font-size:14px;
+    }
+    .section-items a:hover { color:#e50914; }
+    main {
+      flex:3 1 600px; background:#fff; padding:24px;
+      border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    }
+    main h1 { font-size:24px; margin-bottom:16px; font-weight:600; }
+    .alert {
+      background:#fef2f2; border:1px solid #fbcaca;
+      padding:16px; border-radius:6px; margin-bottom:24px;
+    }
+    .alert strong { color:#c92a2a; }
+    .steps { margin-bottom:24px; }
+    .steps h2 { font-size:18px; margin-bottom:12px; }
+    .steps ol, .steps ul {
+      padding-left:20px; color:#444; margin-bottom:24px;
+    }
+    .feedback, .contact {
+      margin-top:32px; padding-top:24px; border-top:1px solid #eee;
+    }
+    .feedback p, .contact p { margin-bottom:12px; font-size:15px; }
+    .feedback button, .contact button {
+      margin-right:12px; padding:8px 16px; border:1px solid #ddd;
+      background:#fff; border-radius:4px; cursor:pointer;
+    }
+    .contact button {
+      background:#e50914; color:#fff; border:none;
+      font-weight:500; transition:background .3s;
+    }
+    .contact button:hover { background:#b20710; }
+    footer {
+      margin-top:48px; background:#111; color:#aaa;
+      padding:24px 16px; text-align:center;
+    }
+    footer p { font-size:14px; }
+    @media(max-width: 768px){
+      .layout { flex-direction:column; }
+      aside, main { width:100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">NETFLIX</div>
+    <a href="signin.html"><button class="btn-signin">Sign In</button></a>
+  </header>
+
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" placeholder="Search for help topics...">
+      <span class="icon">🔍</span>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside>
+      <div class="aside-title">Browse Topics</div>
+
+      <!-- Example section -->
+      <div class="section">
+        <button>Getting Started <span>➤</span></button>
+        <div class="section-items" style="max-height:0;">
+          <a href="#">Creating an account</a>
+          <a href="#">Plans and Pricing</a>
+          <a href="#">Gift Cards</a>
+        </div>
+      </div>
+
+      <div class="section">
+        <button>Account & Billing <span>➤</span></button>
+        <div class="section-items" style="max-height:0;">
+          <a href="#">Update payment info</a>
+          <a href="#">Cancel membership</a>
+        </div>
+      </div>
+
+      <div class="section">
+        <button>Troubleshooting <span>➤</span></button>
+        <div class="section-items" style="max-height:0;">
+          <a href="#">Can't sign in</a>
+          <a href="#">Streaming problems</a>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <h1>How to change your payment method</h1>
+      <div class="alert"><strong>Important:</strong> You can change your payment method anytime. These changes take effect in your next billing cycle.</div>
+
+      <div class="steps">
+        <h2>Steps to change payment method:</h2>
+        <ol>
+          <li>Go to your <a href="#">Account page</a>.</li>
+          <li>Click <strong>Manage payment info</strong>.</li>
+          <li>Select <strong>Add</strong> or <strong>Replace</strong> payment method.</li>
+          <li>Enter new info, then click <strong>Save</strong>.</li>
+        </ol>
+      </div>
+
+      <div class="steps">
+        <h2>Accepted Payment Methods</h2>
+        <ul>
+          <li>Visa, MasterCard, American Express</li>
+          <li>PayPal</li>
+          <li>Netflix Gift Cards</li>
+        </ul>
+      </div>
+
+      <div class="feedback">
+        <p>Was this article helpful?</p>
+        <button>👍 Yes</button>
+        <button>👎 No</button>
+      </div>
+
+      <div class="contact">
+        <h2>Need more help?</h2>
+        <p>Contact us and we'll assist you further.</p>
+        <button>Contact Us</button>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2024 Netflix, Inc. - Help Center</p>
+  </footer>
+
+  <script>
+    // Toggle sidebar accordion behavior
+    document.querySelectorAll('.section > button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('span');
+        const open = content.style.maxHeight && content.style.maxHeight !== '0px';
+        document.querySelectorAll('.section-items').forEach(el => el.style.maxHeight = '0');
+        document.querySelectorAll('.section > button span').forEach(sp => sp.textContent = '➤');
+        if (!open) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.textContent = '▼';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

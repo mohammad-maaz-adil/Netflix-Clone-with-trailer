@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Help Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f9fafb;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #e50914;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+        }
+
+        .netflix-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d1d5db;
+        }
+
+        .search-section {
+            text-align: center;
+            padding: 24px 0;
+        }
+
+        .search-title {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .search-input {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: flex;
+            max-width: 1280px;
+            margin: 20px auto;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 320px;
+            background-color: #fff;
+            padding: 20px;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 16px;
+        }
+
+        .sidebar-section-title {
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .sidebar-items {
+            display: none;
+            margin-top: 8px;
+        }
+
+        .sidebar-item {
+            margin: 5px 0;
+        }
+
+        .sidebar-item a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar-item a:hover {
+            color: #e50914;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .content-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="netflix-logo">NETFLIX</div>
+            <nav class="nav-links">
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </div>
+        <div class="search-section">
+            <h1 class="search-title">How can we help?</h1>
+            <input type="text" class="search-input" placeholder="Search for help topics...">
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Browse all topics</h2>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    Getting Started
+                    <span>▶</span>
+                </div>
+                <div class="sidebar-items">
+                    <div class="sidebar-item"><a href="#">Creating an account</a></div>
+                    <div class="sidebar-item"><a href="#">Plans and Pricing</a></div>
+                    <div class="sidebar-item"><a href="#">Netflix Gift Cards</a></div>
+                    <div class="sidebar-item"><a href="#">How to watch Netflix</a></div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    Account & Billing
+                    <span>▶</span>
+                </div>
+                <div class="sidebar-items">
+                    <div class="sidebar-item"><a href="#">Update payment info</a></div>
+                    <div class="sidebar-item"><a href="#">Cancel membership</a></div>
+                    <div class="sidebar-item"><a href="#">Account settings</a></div>
+                    <div class="sidebar-item"><a href="#">Billing questions</a></div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    Troubleshooting
+                    <span>▶</span>
+                </div>
+                <div class="sidebar-items">
+                    <div class="sidebar-item"><a href="#">Can't sign in</a></div>
+                    <div class="sidebar-item"><a href="#">Streaming problems</a></div>
+                    <div class="sidebar-item"><a href="#">Download issues</a></div>
+                    <div class="sidebar-item"><a href="#">Error codes</a></div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-section-title" onclick="toggleSection(this)">
+                    Managing Profiles
+                    <span>▶</span>
+                </div>
+                <div class="sidebar-items">
+                    <div class="sidebar-item"><a href="#">Create profiles</a></div>
+                    <div class="sidebar-item"><a href="#">Parental controls</a></div>
+                    <div class="sidebar-item"><a href="#">Viewing activity</a></div>
+                    <div class="sidebar-item"><a href="#">Profile settings</a></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2 class="content-title">How to Change Your Payment Method</h2>
+            <div class="content-section">
+                <p>You can change your payment method at any time. Changes will take effect for your next billing cycle.</p>
+            </div>
+            <div class="content-section">
+                <h3>Steps to Change Payment Method:</h3>
+                <ol>
+                    <li>Go to your <a href="#">Account page</a></li>
+                    <li>Click <strong>Manage payment info</strong> in the Membership & Billing section</li>
+                    <li>Select <strong>Add payment method</strong> or <strong>Replace payment method</strong></li>
+                    <li>Enter your new payment information</li>
+                    <li>Select <strong>Save</strong></li>
+                </ol>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Netflix, Inc.</p>
+        <p><a href="#">Privacy</a> | <a href="#">Terms of Use</a> | <a href="#">Help Center</a></p>
+    </footer>
+
+    <script>
+        function toggleSection(section) {
+            const items = section.nextElementSibling;
+            const arrow = section.querySelector('span');
+
+            if (items.style.display === 'block') {
+                items.style.display = 'none';
+                arrow.textContent = '▶';
+            } else {
+                items.style.display = 'block';
+                arrow.textContent = '▼';
+            }
+        }
+    </script>
+</body>
+
+</html>

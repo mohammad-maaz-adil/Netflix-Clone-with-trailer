@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Privacy Statement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        .header {
+            background-color: #dc2626;
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.125rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #fecaca;
+        }
+
+        .back-icon {
+            margin-right: 0.75rem;
+            width: 24px;
+            height: 24px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 4rem 0;
+        }
+
+        .title-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .title-divider {
+            width: 6rem;
+            height: 4px;
+            background-color: #dc2626;
+            margin: 0 auto 1.5rem;
+        }
+
+        .effective-date {
+            font-size: 1.25rem;
+            color: #6b7280;
+        }
+
+        /* Introduction */
+        .introduction {
+            background-color: #f9fafb;
+            border-left: 4px solid #dc2626;
+            padding: 2rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin-bottom: 4rem;
+        }
+
+        .introduction p {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .introduction p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Navigation */
+        .nav-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #dc2626;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 1rem;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .nav-item:hover {
+            border-color: #dc2626;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #dc2626;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .info-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #dc2626;
+            margin-bottom: 1rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .bullet {
+            width: 8px;
+            height: 8px;
+            background-color: #dc2626;
+            border-radius: 50%;
+            margin-top: 8px;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        /* Usage Section */
+        .usage-section {
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 2rem;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .usage-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .usage-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: #dc2626;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+        }
+
+        /* Rights Grid */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .right-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .right-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-title {
+            font-weight: 600;
+            color: #dc2626;
+            margin-bottom: 0.5rem;
+        }
+
+        .right-desc {
+            font-size: 0.875rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #1f2937;
+            color: white;
+            border-radius: 0.5rem;
+            padding: 3rem;
+            margin-top: 4rem;
+        }
+
+        .contact-title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-intro {
+            font-size: 1.125rem;
+            text-align: center;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 32rem;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-label {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fca5a5;
+            margin-bottom: 1rem;
+        }
+
+        .contact-value {
+            color: #d1d5db;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000;
+            color: white;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #dc2626;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+        }
+
+        .footer-divider {
+            border: none;
+            border-top: 1px solid #374151;
+            margin: 2rem 0;
+        }
+
+        .footer-copyright {
+            color: #9ca3af;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="back-link">
+                    <svg class="back-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Back to Home
+                </a>
+                <div class="logo">NETFLIX</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Title Section -->
+            <div class="title-section">
+                <h1 class="title">Privacy Statement</h1>
+                <div class="title-divider"></div>
+                <p class="effective-date">Effective Date: June 18, 2025</p>
+            </div>
+
+            <!-- Introduction -->
+            <section class="introduction">
+                <p>Netflix is committed to protecting your privacy. This Privacy Statement explains our practices regarding the collection, use, and disclosure of information that we receive through our service.</p>
+                <p>We believe in transparency and your right to understand how your information is handled when you use our platform.</p>
+            </section>
+
+            <!-- Quick Navigation -->
+            <section class="nav-section">
+                <h2 class="section-title">Quick Navigation</h2>
+                <div class="nav-grid">
+                    <a href="#collection" class="nav-item">Information We Collect</a>
+                    <a href="#usage" class="nav-item">How We Use Information</a>
+                    <a href="#sharing" class="nav-item">Information Disclosure</a>
+                    <a href="#security" class="nav-item">Data Security</a>
+                    <a href="#rights" class="nav-item">Your Privacy Rights</a>
+                    <a href="#cookies" class="nav-item">Cookies & Tracking</a>
+                    <a href="#transfer" class="nav-item">International Transfers</a>
+                    <a href="#children" class="nav-item">Children's Privacy</a>
+                    <a href="#changes" class="nav-item">Policy Updates</a>
+                    <a href="#contact" class="nav-item">Contact Information</a>
+                </div>
+            </section>
+
+            <!-- Information Collection -->
+            <section id="collection" class="content-section">
+                <h2 class="section-title">Information We Collect</h2>
+                <div class="info-card">
+                    <h3 class="card-title">Personal Information</h3>
+                    <ul class="info-list">
+                        <li><span class="bullet"></span>Account registration details (name, email, password)</li>
+                        <li><span class="bullet"></span>Payment and billing information</li>
+                        <li><span class="bullet"></span>Profile preferences and viewing history</li>
+                        <li><span class="bullet"></span>Customer support communications</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3 class="card-title">Technical Information</h3>
+                    <ul class="info-list">
+                        <li><span class="bullet"></span>Device information and identifiers</li>
+                        <li><span class="bullet"></span>Network connection data and IP address</li>
+                        <li><span class="bullet"></span>Usage patterns and interaction data</li>
+                        <li><span class="bullet"></span>Performance and diagnostic information</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Usage -->
+            <section id="usage" class="content-section">
+                <h2 class="section-title">How We Use Your Information</h2>
+                <div class="usage-section">
+                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">We use your information to provide, maintain, and improve our streaming service. This includes:</p>
+                    <div class="usage-grid">
+                        <div class="usage-item">
+                            <div class="usage-bullet"></div>
+                            <span style="font-weight: 500;">Service delivery and personalization</span>
+                        </div>
+                        <div class="usage-item">
+                            <div class="usage-bullet"></div>
+                            <span style="font-weight: 500;">Payment processing and billing</span>
+                        </div>
+                        <div class="usage-item">
+                            <div class="usage-bullet"></div>
+                            <span style="font-weight: 500;">Customer support and communication</span>
+                        </div>
+                        <div class="usage-item">
+                            <div class="usage-bullet"></div>
+                            <span style="font-weight: 500;">Content recommendations</span>
+                        </div>
+                        <div class="usage-item">
+                            <div class="usage-bullet"></div>
+                            <span style="font-weight: 500;">Service improvement and analytics</span>
+                        </div>
+                        <div class="usage-item">
+                            <div class="usage-bullet"></div>
+                            <span style="font-weight: 500;">Legal compliance and security</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Your Privacy Rights -->
+            <section id="rights" class="content-section">
+                <h2 class="section-title">Your Privacy Rights</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">You have control over your personal information. Depending on your location, you may have the following rights:</p>
+                <div class="rights-grid">
+                    <div class="right-card">
+                        <h4 class="right-title">Access</h4>
+                        <p class="right-desc">Request a copy of your personal data</p>
+                    </div>
+                    <div class="right-card">
+                        <h4 class="right-title">Correction</h4>
+                        <p class="right-desc">Update or correct inaccurate information</p>
+                    </div>
+                    <div class="right-card">
+                        <h4 class="right-title">Deletion</h4>
+                        <p class="right-desc">Request deletion of your account and data</p>
+                    </div>
+                    <div class="right-card">
+                        <h4 class="right-title">Portability</h4>
+                        <p class="right-desc">Export your data in a usable format</p>
+                    </div>
+                    <div class="right-card">
+                        <h4 class="right-title">Opt-out</h4>
+                        <p class="right-desc">Withdraw consent for certain processing</p>
+                    </div>
+                    <div class="right-card">
+                        <h4 class="right-title">Restriction</h4>
+                        <p class="right-desc">Limit how we process your information</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="contact-section">
+                <h2 class="contact-title">Contact Our Privacy Team</h2>
+                <p class="contact-intro">Have questions about your privacy or this policy? We're here to help.</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3 class="contact-label">Email Us</h3>
+                        <p class="contact-value">privacy@netflix.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="contact-label">Response Time</h3>
+                        <p class="contact-value">Within 30 days</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">NETFLIX</div>
+                <p class="footer-tagline">Your privacy matters to us</p>
+                <hr class="footer-divider">
+                <p class="footer-copyright">&copy; 2025 Netflix, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75vw;
+  margin: auto;
+  height: 85px;
+}
+
+nav img {
+  height: 40px;
+  position: relative;
+}
+
+.background {
+  background-image: url("images/background_img.jpg");
+  background-position: center center;
+  background-size: max(1500px, 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.background .overlay {
+  background-color: black;
+  opacity: 0.65;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+form h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin-top: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f6121d;
+}
+
+.signin {
+  margin-top: 15px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.signin a {
+  color: white;
+  text-decoration: none;
+}
+
+.signin a:hover {
+  text-decoration: underline;
+}

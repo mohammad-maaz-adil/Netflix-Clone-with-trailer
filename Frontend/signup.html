@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="overlay"></div>
+    <nav>
+      <img src="/images/logo.svg" alt="logo.svg">
+    </nav>
+    <div class="form">
+    <div class="form-container">
+      <form onsubmit="signup(); return false;">
+        <h2>Sign Up</h2>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+        <p class="signin">Already have an account? <a href="signin.html">Sign in.</a></p>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+
+</html>

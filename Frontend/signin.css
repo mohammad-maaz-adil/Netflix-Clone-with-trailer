@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75vw;
+  margin: auto;
+  height: 85px;
+}
+
+nav img {
+  height: 40px;
+  position: relative;
+}
+
+body {
+    background-image: url("images/background_img.jpg");
+    background-position: center center;
+    background-size: max(1500px, 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.background .overlay {
+    background-color: black;
+    opacity: 0.65;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+    padding: 60px 68px 60px;
+    width: 450px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.form-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 34px;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.form-control input::placeholder {
+    color: #8c8c8c;
+    font-size: 1rem;
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 1;
+    padding: 0px 4px;
+}
+
+.form-control input:focus + label,
+.form-control input:not(:placeholder-shown) + label {
+    top: 10px;
+    left: 16px;
+    font-size: 0.70rem;
+    /* color: #b3b3b3; */
+    padding: 0px 4px;
+}
+
+button {
+    width: 100%;
+    padding: 16px 0;
+    background: #e50914;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background: #f6121d;
+}
+
+.form-help {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    color: #b3b3b3;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.form-wrapper small {
+    display: block;
+    margin-top: 16px;
+    color: #b3b3b3;
+}
+
+.form-wrapper small a {
+    color: #fff;
+}
+
+.input-error {
+    color: #e87c03;
+    font-size: 0.875rem;
+    margin-top: 6px;
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+}
+
+@media(max-width:740px) {
+    body::before {
+        display: none;
+    }
+
+    nav,
+    .form-wrapper {
+        padding: 20px;
+    }
+
+    nav img {
+        width: 140px;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        top: 45%;
+    }
+}
