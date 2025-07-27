@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/netflix.html"
+status = 200
