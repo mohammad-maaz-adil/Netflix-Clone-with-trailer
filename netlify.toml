@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/*"
-to = "/netflix.html"
+to = "/Frontend/netflix.html"
 status = 200
