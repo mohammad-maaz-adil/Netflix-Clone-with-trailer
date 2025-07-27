@@ -53,6 +53,12 @@ nav button {
     font-size: 1.1rem;
 }
 
+.nav2 {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
 .maincontent {
     display: flex;
     justify-content: center;
