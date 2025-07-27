@@ -9,6 +9,8 @@ body {
     color: #ffffff;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 .main {
     background-image: url("images/background_img.jpg");
     background-position: center center;
